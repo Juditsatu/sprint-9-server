@@ -31,6 +31,8 @@ app.get( '*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'public/index.html'));
 });
 
+let port = process.env.PORT || 4000;
+
 app.listen(process.env.PORT, () => {
     console.log(`Servidor activo en puerto ${process.env.PORT}`)
 });
